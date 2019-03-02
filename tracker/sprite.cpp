@@ -30,7 +30,7 @@ Sprite::Sprite(const std::string& name) :
                     Gamedata::getInstance().getXmlInt(name+"/speedX"), 
                     Gamedata::getInstance().getXmlInt(name+"/speedY")) 
            ),
-  image( ImageFactory::getInstance()->getImage(name) ),
+  image( ImageFactory::getInstance().getImage(name) ),
   worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
   worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }

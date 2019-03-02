@@ -3,7 +3,7 @@
 #include "imageFactory.h"
 
 World::World(const std::string& name, int fact) : 
-  image( ImageFactory::getInstance()->getImage(name) ),
+  image( ImageFactory::getInstance().getImage(name) ),
   factor(fact),
     imageWidth( image->getWidth() ),
     viewX(0.0), viewY(0.0), 
