@@ -32,7 +32,8 @@ void Viewport::draw() const {
     writeText("Tracking: "+objectToTrack->getName(), msgPos[0], msgPos[1]);
   
   //Print Name 
-  IoMod::getInstance().writeText("Drew Paszek", 5, 450);
+  SDL_Color blue = {17, 146, 175, 255};
+  IoMod::getInstance().writeText("Drew Paszek", 5, 450, blue);
   
 }
 
