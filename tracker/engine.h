@@ -21,7 +21,9 @@ private:
   Clock& clock;
 
   SDL_Renderer * const renderer;
-  World world;
+  World ocean;
+  World mount;
+  
   Viewport& viewport;
 
   Drawable* star;

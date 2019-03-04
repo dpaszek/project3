@@ -21,7 +21,8 @@ Engine::Engine() :
   io( IoMod::getInstance() ),
   clock( Clock::getInstance() ),
   renderer( rc.getRenderer() ),
-  world("back", Gamedata::getInstance().getXmlInt("back/factor") ),
+  ocean("back", Gamedata::getInstance().getXmlInt("back/factor") ),
+  mount("mountains", Gamedata::getInstance().getXmlInt("mountains/factor")),
   viewport( Viewport::getInstance() ),
   star(new Sprite("YellowStar")),
   spinningStar(new MultiSprite("SpinningStar")),
@@ -34,7 +35,8 @@ Engine::Engine() :
 }
 
 void Engine::draw() const {
-  world.draw();
+  ocean.draw();
+  mount.draw();
 
   star->draw();
   spinningStar->draw();
@@ -53,7 +55,8 @@ void Engine::draw() const {
 void Engine::update(Uint32 ticks) {
   star->update(ticks);
   spinningStar->update(ticks);
-  world.update();
+  ocean.update();
+  mount.update();
   viewport.update(); // always update viewport last
 }
 

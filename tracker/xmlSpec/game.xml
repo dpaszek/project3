@@ -18,15 +18,21 @@
 </view>
 
 <world>
-  <width>2000</width>
-  <height>800</height>
+  <width>3800</width>
+  <height>1081</height>
 </world>
 
 <back>
-  <file>assets/bigstarrysky.png</file>
-  <factor>1</factor>
+  <file>assets/ocean1.jpg</file>
+  <factor>3</factor>
   <transparency>false</transparency>
 </back>
+
+<mountains>
+  <file>assets/biome.png</file>
+  <factor>2</factor>
+  <transparency>true</transparency>
+</mountains>
 
 <font name="font">
   <file>fonts/arial.ttf</file>
