@@ -48,7 +48,7 @@
   <startLoc x="50" y="240"/>
   <frames>9</frames>
   <frameInterval>60</frameInterval>
-  <speedX>200</speedX>
+  <speedX>300</speedX>
   <speedY>500</speedY>
   <transparency>true</transparency>
 </shark>
@@ -58,7 +58,7 @@
   <startLoc x="50" y="240"/>
   <frames>9</frames>
   <frameInterval>60</frameInterval>
-  <speedX>200</speedX>
+  <speedX>300</speedX>
   <speedY>500</speedY>
   <transparency>true</transparency>
 </sharkLeft>
