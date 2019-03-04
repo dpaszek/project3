@@ -30,7 +30,7 @@
 
 <mountains>
   <file>assets/biome.png</file>
-  <factor>2</factor>
+  <factor>1</factor>
   <transparency>true</transparency>
 </mountains>
 
@@ -43,22 +43,85 @@
   <alpha>0</alpha>
 </font>
 
-<SpinningStar>
-  <file>assets/stars.png</file>
-  <startLoc x="50" y="140"/>
-  <frames>4</frames>
-  <frameInterval>50</frameInterval>
+<shark>
+  <file>assets/sharkspriteRight.png</file>
+  <startLoc x="50" y="240"/>
+  <frames>9</frames>
+  <frameInterval>60</frameInterval>
   <speedX>200</speedX>
-  <speedY>200</speedY>
+  <speedY>500</speedY>
   <transparency>true</transparency>
-</SpinningStar>
+</shark>
 
-<YellowStar>
-  <file>assets/yellowstar32.png</file>
-  <startLoc x="227" y="240"/>
-  <speedX>300</speedX>
+<sharkLeft>
+  <file>assets/sharksprite.png</file>
+  <startLoc x="50" y="240"/>
+  <frames>9</frames>
+  <frameInterval>60</frameInterval>
+  <speedX>200</speedX>
+  <speedY>500</speedY>
+  <transparency>true</transparency>
+</sharkLeft>
+
+<starfish1>
+  <file>assets/starfish.png</file>
+  <startLoc x="550" y="630"/>
+  <frames>1</frames>
+  <frameInterval>60</frameInterval>
+  <speedX>200</speedX>
+  <speedY>175</speedY>
+  <transparency>true</transparency>
+</starfish1>
+
+<starfish2>
+  <file>assets/starfish.png</file>
+  <startLoc x="0" y="240"/>
+  <frames>1</frames>
+  <frameInterval>60</frameInterval>
+  <speedX>250</speedX>
   <speedY>300</speedY>
-  <transparency>false</transparency>
-</YellowStar>
+  <transparency>true</transparency>
+</starfish2>
+
+<starfish3>
+  <file>assets/starfish.png</file>
+  <startLoc x="620" y="350"/>
+  <frames>1</frames>
+  <frameInterval>60</frameInterval>
+  <speedX>100</speedX>
+  <speedY>125</speedY>
+  <transparency>true</transparency>
+</starfish3>
+
+
+<fish1>
+  <file>assets/fish.png</file>
+  <startLoc x="255" y="400"/>
+  <frames>1</frames>
+  <frameInterval>60</frameInterval>
+  <speedX>300</speedX>
+  <speedY>240</speedY>
+  <transparency>true</transparency>
+</fish1>
+
+<fish2>
+  <file>assets/fish.png</file>
+  <startLoc x="80" y="475"/>
+  <frames>1</frames>
+  <frameInterval>60</frameInterval>
+  <speedX>70</speedX>
+  <speedY>85</speedY>
+  <transparency>true</transparency>
+</fish2>
+
+<fish3>
+  <file>assets/fish.png</file>
+  <startLoc x="240" y="90"/>
+  <frames>1</frames>
+  <frameInterval>60</frameInterval>
+  <speedX>225</speedX>
+  <speedY>150</speedY>
+  <transparency>true</transparency>
+</fish3>
 
 </GameData>

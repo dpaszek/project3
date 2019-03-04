@@ -35,11 +35,6 @@ Sprite::Sprite(const std::string& name) :
   worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
-Sprite::~Sprite()
-{
-	delete image;
-}
-
 inline namespace{
   constexpr float SCALE_EPSILON = 2e-7;
 }

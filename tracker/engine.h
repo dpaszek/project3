@@ -26,10 +26,10 @@ private:
   
   Viewport& viewport;
 
-  Drawable* star;
-  Drawable* spinningStar;
   int currentSprite;
-
+  
+  std::vector<Drawable*> spr;
+  
   bool makeVideo;
 
   void draw() const;

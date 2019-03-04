@@ -9,7 +9,7 @@ public:
   Sprite(const std::string&, const Vector2f& pos, const Vector2f& vel, 
          const Image*);
   Sprite(const Sprite&) = delete;
-  virtual ~Sprite();
+  virtual ~Sprite(){};
   Sprite& operator=(const Sprite&) = delete;
 
   virtual void draw() const;

@@ -6,13 +6,16 @@
 #include <iomanip>
 #include "sprite.h"
 #include "multisprite.h"
+#include "twowaysprite.h"
 #include "gameData.h"
 #include "engine.h"
 #include "frameGenerator.h"
 
 Engine::~Engine() { 
-  delete star;
-  delete spinningStar;
+  for(auto& t : spr)
+  {
+  	delete t;
+  }
   std::cout << "Terminating program" << std::endl;
 }
 
@@ -24,13 +27,28 @@ Engine::Engine() :
   ocean("back", Gamedata::getInstance().getXmlInt("back/factor") ),
   mount("mountains", Gamedata::getInstance().getXmlInt("mountains/factor")),
   viewport( Viewport::getInstance() ),
-  star(new Sprite("YellowStar")),
-  spinningStar(new MultiSprite("SpinningStar")),
   currentSprite(0),
+  spr(8),
   makeVideo( false )
 {
-  star->setScale(1.5); 
-  Viewport::getInstance().setObjectToTrack(star);
+  spr[0] = new TwoWaySprite("shark");
+  spr[0]->setScale(1.5);
+  spr[1] = new TwoWaySprite("shark");
+  spr[1]->setScale(1.5);
+  spr[2] = new Sprite("starfish1");
+  spr[2]->setScale(.3);
+  spr[3] = new Sprite("starfish2");
+  spr[3]->setScale(.4);
+  spr[4] = new Sprite("starfish3");
+  spr[4]->setScale(.4);
+  spr[5] = new Sprite("fish1");
+  spr[5]->setScale(.5);
+  spr[6] = new Sprite("fish2");
+  spr[6]->setScale(.5);
+  spr[7] = new Sprite("fish3");
+  spr[7]->setScale(.5);
+   
+  Viewport::getInstance().setObjectToTrack(spr[0]);
   std::cout << "Loading complete" << std::endl;
 }
 
@@ -38,8 +56,10 @@ void Engine::draw() const {
   ocean.draw();
   mount.draw();
 
-  star->draw();
-  spinningStar->draw();
+  for(auto& t : spr)
+  {
+  	t->draw();
+  }
   
   std::string fps;
   std::stringstream strm;
@@ -53,22 +73,21 @@ void Engine::draw() const {
 }
 
 void Engine::update(Uint32 ticks) {
-  star->update(ticks);
-  spinningStar->update(ticks);
   ocean.update();
   mount.update();
+  
+  for(auto& t : spr)
+  {
+  	t->update(ticks);
+  }
+  
   viewport.update(); // always update viewport last
 }
 
 void Engine::switchSprite(){
   ++currentSprite;
-  currentSprite = currentSprite % 2;
-  if ( currentSprite ) {
-    Viewport::getInstance().setObjectToTrack(spinningStar);
-  }
-  else {
-    Viewport::getInstance().setObjectToTrack(star);
-  }
+  currentSprite = currentSprite % spr.size();
+  Viewport::getInstance().setObjectToTrack(spr[currentSprite]);
 }
 
 void Engine::play() {
