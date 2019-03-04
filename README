@@ -1,23 +1,40 @@
-Name:
+Name: Drew Paszek
 
-Course:
+Course: CPSC 4160
 
-Clemson Email Address:
+Clemson Email Address: dpaszek@clemson.edu
 
 Project no: #3
 
-Project due date:
+Project due date: 3/4/2019
 
-Project description:
+Project description: 
+- The purpose of the project was to implement our own sprites
+in a tracker along with a few other concepts like parallax scrolling, 
+Rule of 3, Meyer's Singleton, etc.
 
 where did I get my sprites, including background:
+Ocean background: https://www.desktopbackground.org/download/1920x1080/2010/10/08/91953_underwater-ocean-water-backgrounds_1920x1200_h.jpg
+
+Mountains background: https://vignette.wikia.nocookie.net/subnautica/images/3/34/Mountains_Biome.png/revision/latest?cb=20180124190720
+
+Shark: https://www.deviantart.com/siri-existence/art/Robo-Shark-Spritesheet-700450905
+
+Starfish: https://www.freepngimg.com/png/17970-starfish-png-clipart
+
+Fish: https://blog.redbluegames.com/when-we-started-mini-fish-i-had-been-wanting-to-try-my-hand-at-some-pixel-art-which-i-d-never-be6bc4e9652c
+
 
 What is the theme of my animation:
+- The theme of my animation is underwater in the ocean.
 
-Did I make a polymorphic vector:  Yes or No
+Did I make a polymorphic vector:  Yes 
 
 What do I like better: GoF Singleton or Meyer's Singleton?
+-Meyer's Singleton
 
 The easiest part of this project:
+- Converting ranged for-loops into while loops and vice versa
 
 Problems that I had in completing this project:
+- I found it difficult to find good sprites with a coherent theme.
